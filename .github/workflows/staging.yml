@@ -2,12 +2,12 @@ name: Staging test
 
 on:
   push:
-    branches: [staging]
-
-
+    branches: [master]
+    
 jobs:
     test:
         runs-on: [ self-hosted, nodebuilder ]
         steps:
           - uses: actions/checkout@v3
-          - name: 
+          - name: nodejs
+            run: docker build -t helloworld .
