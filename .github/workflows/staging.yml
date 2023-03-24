@@ -5,11 +5,11 @@ on:
     types: [closed]
 
 jobs:
-    build:
-      runs-on: [ self-hosted ]
-      steps:
-        - uses: actions/checkout@v3
-        - name: nodejs
-        - run: docker build -t helloworld .
-        - run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
-        - run: docker push techmutant/mydockerrepo
+  build:
+    runs-on: [ self-hosted ]
+    steps:
+      - uses: actions/checkout@v3
+      - name: nodejs
+      - run: docker build -t helloworld .
+      - run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
+      - run: docker push techmutant/mydockerrepo
