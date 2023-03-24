@@ -1,5 +1,4 @@
 name: Staging test
-
 on:
   pull_request:
     branches: [master]
