@@ -5,9 +5,10 @@ on:
     branches: [master]
 
 jobs:
-    test:
+    build:
         runs-on: [ self-hosted ]
         steps:
           - uses: actions/checkout@v3
           - name: nodejs
             run: docker build -t helloworld .
+            run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{DOCKER_PASSWORD}}
