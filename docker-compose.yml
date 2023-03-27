@@ -2,7 +2,7 @@
 services:
   hello:
     image: techmutant/mydockerrepo
-    container_name: bimugdha/devopsDW
+    container_name: bimugdha-devopsDW
 
     #restart: always
     # environment:
