@@ -1,7 +1,7 @@
 
 services:
   hello:
-    image: node:18-alpine   
+    image: techmutant/mydockerrepo
     container_name: bimugdha/devopsDW
 
     #restart: always
